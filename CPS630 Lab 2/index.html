@@ -1,0 +1,277 @@
+<!DOCTYLE html>
+<html>
+<head>
+	<title> Weather App </title>
+	<script type="text/javascript" src="js/myJavascript.js"></script>
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+	<section>
+		
+			<header>
+				<button class="button1" type="button" onclick="celFunction()">Celsius &deg;C</button>
+				<button class="button1" type="button" onclick="fahFunction()">Fahrenheit &deg;F</button>
+				<button class="button1 disabled" type="button" onclick="km()">Kilometers per Hour (km/h)</button>
+				<button class="button1 disabled" type="button" onclick="mph()">Miles per Hour (mph)</button>
+			</header>
+		
+		<main class="title">
+			<h1>Weather</h1>
+		</main>
+		
+		<article>
+			<input id="location_searchbox" class="searchbar" type="text" name="search" placeholder="Location" onkeypress="handle_search(event)">
+			<button class="button2" type="button" onclick="cityFunction()">Submit</button>
+		</article>
+		
+		
+		<h2>
+			<span id="location">Brampton</span> , <span id="country">ca</span>
+		</h2>
+				
+		<div class="weather1">
+			<h3><b> Temperature </b>
+				<div class="temp">
+				<span id="temperature">0</span>
+				</div>	
+			</h3>
+		</div>
+		<div class = "weather2">
+			<figure>
+				<img class="imgICON" id="icon" width="150px" src= "">
+				<figcaption>
+					<details >
+						<summary id="detail">jjj</summary>
+						<p id="description">ffff</p>
+					</details>
+				</figcaption>
+			</figure>
+		</div>
+		
+		<div class="weather3">
+			<div class="max"> Max: 
+				<span id="max"></span> 
+			</div>
+					
+			<div class="min"> Min: 
+				<span id="min"></span>
+			</div>
+			
+			<div class="humidity"> Humidity: 
+				<span id="humidity"></span> %
+			</div>
+					
+			<div class="wind">Wind: 
+				<span id="wind">0</span> m/s <span id="direction"> N</span>
+			</div>
+		</div>		
+						
+		<div class="forcast">
+			<!-- Forcast -->
+			<table>
+			  <tr>
+				<th>Day</th>
+				<th><span id="day1">0</span></th>
+				<th><span id="day2">0</span></th>
+				<th><span id="day3">0</span></th>
+				<th><span id="day4">0</span></th>
+				<th><span id="day5">0</span></th>
+			  </tr>
+			   <tr>
+				<td>Date</td>
+				<td><span id="date1">0</span></td>
+				<td><span id="date2">0</span></td>
+				<td><span id="date3">0</span></td>
+				<td><span id="date4">0</span></td>
+				<td><span id="date5">0</span></td>
+			  </tr>
+			  <tr>
+				<td>Time</td>
+				<td><span id="time1">0</span></td>
+				<td><span id="time2">0</span></td>
+				<td><span id="time3">0</span></td>
+				<td><span id="time4">0</span></td>
+				<td><span id="time5">0</span></td>
+			  </tr>
+			  <tr>
+				<td>Discription</td>
+				<td><span id="des1">0</span></td>
+				<td><span id="des2">0</span></td>
+				<td><span id="des3">0</span></td>
+				<td><span id="des4">0</span></td>
+				<td><span id="des5">0</span></td>
+			  </tr>
+			  <tr>
+				<td></td>
+				<td><img id="pic1" width="100px" src= ""></td>
+				<td><img id="pic2" width="100px" src= ""></td>
+				<td><img id="pic3" width="100px" src= ""></td>
+				<td><img id="pic4" width="100px" src= ""></td>
+				<td><img id="pic5" width="100px" src= ""></td>
+			  </tr>
+			  <tr>
+				<td>Temp.</td>				
+				<td><span id="temp1">0</span></td>
+				<td><span id="temp2">0</span></td>
+				<td><span id="temp3">0</span></td>
+				<td><span id="temp4">0</span></td>
+				<td><span id="temp5">0</span></td>
+			  </tr>
+			  <tr>
+				<td>Humidity</td>
+				<td><span id="humi1">0</span></td>
+				<td><span id="humi2">0</span></td>
+				<td><span id="humi3">0</span></td>
+				<td><span id="humi4">0</span></td>
+				<td><span id="humi5">0</span></td>
+			  </tr>
+			  <tr>
+				<td>Wind</td>
+				<td><span id="windS1">0</span></td>
+				<td><span id="windS2">0</span></td>
+				<td><span id="windS3">0</span></td>
+				<td><span id="windS4">0</span></td>
+				<td><span id="windS5">0</span></td>
+			  </tr>
+			</table>
+		</div>
+			<br><br>
+				<!-- Hourly (3hr intervals) update-->
+		<div class="forcast1">	
+			<table>
+			  <tr>
+				<th>Day</th>
+				<th><span id="d1">0</span></th>
+				<th><span id="d2"></span></th>
+				<th><span id="d3"></span></th>
+				<th><span id="d4"></span></th>
+				<th><span id="d5"></span></th>
+				<th><span id="d6"></span></th>
+				<th><span id="d7"></span></th>
+				<th><span id="d8"></span></th>
+				<th><span id="d9"></span></th>
+				<th><span id="d10"></span></th>
+				<th><span id="d11"></span></th>
+				<th><span id="d12"></span></th>
+			  </tr>
+			   <tr>
+				<td>Date</td>
+				<td><span id="da1"></span></td>
+				<td><span id="da2"></span></td>
+				<td><span id="da3"></span></td>
+				<td><span id="da4"></span></td>
+				<td><span id="da5"></span></td>
+				<td><span id="da6"></span></td>
+				<td><span id="da7"></span></td>
+				<td><span id="da8"></span></td>
+				<td><span id="da9"></span></td>
+				<td><span id="da10"></span></td>
+				<td><span id="da11"></span></td>
+				<td><span id="da12"></span></td>
+			  </tr>
+			  <tr>
+				<td>Time</td>
+				<td><span id="t1"></span></td>
+				<td><span id="t2"></span></td>
+				<td><span id="t3"></span></td>
+				<td><span id="t4"></span></td>
+				<td><span id="t5"></span></td>
+				<td><span id="t6"></span></td>
+				<td><span id="t7"></span></td>
+				<td><span id="t8"></span></td>
+				<td><span id="t9"></span></td>
+				<td><span id="t10"></span></td>
+				<td><span id="t11"></span></td>
+				<td><span id="t12"></span></td>
+			  </tr>
+			  <tr>
+				<td>Discription</td>
+				<td><span id="de1"></span></td>
+				<td><span id="de2"></span></td>
+				<td><span id="de3"></span></td>
+				<td><span id="de4"></span></td>
+				<td><span id="de5"></span></td>
+				<td><span id="de6"></span></td>
+				<td><span id="de7"></span></td>
+				<td><span id="de8"></span></td>
+				<td><span id="de9"></span></td>
+				<td><span id="de10"></span></td>
+				<td><span id="de11"></span></td>
+				<td><span id="de12"></span></td>
+			  </tr>
+			  <tr>
+				<td>icon</td>
+				<td><img id="p1" width="100px" src= ""></td>
+				<td><img id="p2" width="100px" src= ""></td>
+				<td><img id="p3" width="100px" src= ""></td>
+				<td><img id="p4" width="100px" src= ""></td>
+				<td><img id="p5" width="100px" src= ""></td>
+				<td><img id="p6" width="100px" src= ""></td>
+				<td><img id="p7" width="100px" src= ""></td>
+				<td><img id="p8" width="100px" src= ""></td>
+				<td><img id="p9" width="100px" src= ""></td>
+				<td><img id="p10" width="100px" src= ""></td>
+				<td><img id="p11" width="100px" src= ""></td>
+				<td><img id="p12" width="100px" src= ""></td>
+			  </tr>
+			  <tr>
+				<td>temp</td>				
+				<td><span id="te1"></span></td>
+				<td><span id="te2"></span></td>
+				<td><span id="te3"></span></td>
+				<td><span id="te4"></span></td>
+				<td><span id="te5"></span></td>
+				<td><span id="te6"></span></td>
+				<td><span id="te7"></span></td>
+				<td><span id="te8"></span></td>
+				<td><span id="te9"></span></td>
+				<td><span id="te10"></span></td>
+				<td><span id="te11"></span></td>
+				<td><span id="te12"></span></td>
+			  </tr>
+			  <tr>
+				<td>Humidity</td>
+				<td><span id="hu1"></span></td>
+				<td><span id="hu2"></span></td>
+				<td><span id="hu3"></span></td>
+				<td><span id="hu4"></span></td>
+				<td><span id="hu5"></span></td>
+				<td><span id="hu6"></span></td>
+				<td><span id="hu7"></span></td>
+				<td><span id="hu8"></span></td>
+				<td><span id="hu9"></span></td>
+				<td><span id="hu10"></span></td>
+				<td><span id="hu11"></span></td>
+				<td><span id="hu12"></span></td>
+			  </tr>
+			  <tr>
+				<td>Wind</td>
+				<td><span id="wi1"></span></td>
+				<td><span id="wi2"></span></td>
+				<td><span id="wi3"></span></td>
+				<td><span id="wi4"></span></td>
+				<td><span id="wi5"></span></td>
+				<td><span id="wi6"></span></td>
+				<td><span id="wi7"></span></td>
+				<td><span id="wi8"></span></td>
+				<td><span id="wi9"></span></td>
+				<td><span id="wi10"></span></td>
+				<td><span id="wi11"></span></td>
+				<td><span id="wi12"></span></td>
+			  </tr>
+			</table>
+		</div>
+		</article>
+		
+
+			<footer>
+				<p>Name: Retinder Labana - Student Number: 500687206 - Date: Feb 11 2016</p> 
+			</footer>
+		
+		
+	</section>
+	
+	
+	
+</body>
+</html>

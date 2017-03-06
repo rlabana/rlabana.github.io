@@ -1,0 +1,377 @@
+body{
+	margin: 0;
+	background-image: url(Animals___Birds_Tit_during_inclement_weather_101596_.jpg);
+	Background-size: cover;
+}
+
+.weather {
+   float: left;
+   margin: 10px;
+   padding: 10px;
+   max-width: 300px;
+   height: 250px;
+   border: 1px solid black;
+}
+
+.button1{
+	font-size: 20px;
+	padding: 5px 12px;
+	border-radius: 12px;
+	background-color: Grey;
+    color: #e6e6e8;
+    border: 2px solid #e6e6e8;
+	transition-duration: 0.4s;
+    cursor: pointer;
+	width: 20%;
+	margin:1.5%;	
+}
+
+.button1:hover {
+    background-color: #1ABC9C;
+    color: white;
+}
+
+main.title{
+	text-align: center;
+	font-size: 200%;
+	/*background-color: Grey;
+	opacity : 0.8;*/
+	margin: 1.5%;
+	border-radius: 12px;
+    color: white;
+	padding: 1px;
+}
+
+.button2{
+	font-size: 20px;
+	padding: 5px 12px;
+	border-radius: 12px;
+	background-color: Grey;
+    color: #e6e6e8;
+    border: 2px solid #e6e6e8;
+	transition-duration: 0.4s;
+	margin:1.5%;
+	transition-duration: 0.4s;
+    cursor: pointer;
+	width: 25%;
+}
+.button2:hover {
+    background-color: #1ABC9C;
+    color: white;
+}
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+input{
+	border: 2px solid #e6e6e8;
+	border-radius: 4px;
+	transition: width 0.4s ;
+	font-size: 20px;
+	padding: 5px 12px;
+	color: black;
+	margin:1.5%;
+}
+/*
+input:focus {
+    width: 65%;
+	background-color: #F1C40F;
+	color: black;
+}*/
+
+input:hover {
+   background-color: #F1C40F;
+   color: black;
+}
+
+table {
+    border-collapse: collapse;
+
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+h2{
+	text-align: center;
+	font-size: 275%;
+	border-radius: 12px;
+    color: #FFEB3B;
+	margin: 0;
+	padding: 10px;
+	/*background-color: Grey;
+	margin:1.5%;
+	opacity : 0.9;*/
+
+}
+
+.weather1{
+	text-align: center;
+	font-size: 200%;
+	border-radius: 12px;
+    color: #FFEB3B;
+	margin: 0;
+	padding: 10px;
+	/*background-color: Grey;
+	margin:1.5%;
+	opacity : 0.8;*/
+}
+.weather2{
+	text-align: center;
+	font-size: 150%;
+	border-radius: 12px;
+    color: #FFEB3B;
+	margin: 0;
+	padding: 10px;
+	/*background-color: Grey;
+	margin:1.5%;
+	opacity : 0.9;*/
+	float : left;
+	width: 45%;
+}
+.weather3{
+	text-align: center;
+	font-size: 150%;
+	border-radius: 12px;
+    color: #FFEB3B;
+	margin: 0;
+	padding: 10px;
+	/*background-color: Grey;
+	margin:1.5%;
+	opacity : 0.9;*/
+	float : left;
+	width: 45%;
+	height: 250px;
+}
+.weather4{
+	text-align: center;
+	font-size: 150%;
+	border-radius: 12px;
+    color: #FFEB3B;
+	margin: 0;
+	padding: 10px;
+	/*background-color: Grey;
+	margin:1.5%;
+	opacity : 0.9;*/
+	float : left;
+	width: 45%;
+	height: 100px;
+}
+
+.forcast{
+	text-align: center;
+	font-size: 150%;
+	border-radius: 12px;
+    color: #FFEB3B;
+	padding: 10px;
+	background-color: Grey;
+	margin:1.5%;
+	opacity : 0.9;
+	float: left;
+}
+.forcast1{
+	text-align: center;
+	font-size: 150%;
+	border-radius: 12px;
+    color: #FFEB3B;
+	margin: 0;
+	padding: 10px;
+	background-color: Grey;
+	margin:1.5%;
+	opacity : 0.9;
+	float: left;
+	margin-bottom: 100px;
+}
+
+footer{
+	position: fixed;
+	bottom: 1.5%;
+	text-align: center;
+	font-size: 100%;
+	background-color: Grey;
+	opacity : 0.9;
+	margin: 1.5%;
+	border-radius: 12px;
+    color: white;
+	padding: 1px;
+	width: 98%;
+}
+
+
+@media only screen and (min-width:400px)
+{
+	.weather1{
+		float: left;
+		height: 200px;
+		width: 93%
+	}
+	.weather2{
+		float: left;
+		width: 35%;
+		height: 100px;
+		margin-left: 8%;
+	}
+	.imgICON{
+		width: 150px;
+	}
+	.weather4{
+		float: left;
+		width: 35%;
+		height: 100px;
+	}
+	.weather3{
+		text-align: left;
+		float: left;
+		width: 93%;
+		height: 130px;
+		font-size: 18px;
+		margin-top: 5px;
+	}
+	.forcast{
+		float:  center;
+	}
+}
+
+@media only screen and (min-width:600px)
+{
+	.weather1{
+		margin-left: 5%;
+		font-size: 250%;
+		float: left;
+		width: 45%;
+		height: 200px;
+	}
+	.weather2{
+		float: left;
+		width: 35%;
+		height: 200px;
+	}
+	.imgICON{
+		width: 200px;
+	}
+	.weather4{
+		float: left;
+		width: 35%;
+		height: 100px;
+		margin: 5%;
+	}
+	.weather3{
+		text-align: left;
+		float: left;
+		width: 35%;
+		height: 130px;
+		font-size: 18px;
+		margin-top: 5px;
+	}
+	.forcast{
+		margin-left: 5%;
+		float:  center;
+	}
+}
+/*Desktop */
+@media only screen and (min-width:1000px)
+{
+	.weather1{
+		margin-left: 10%;
+		font-size: 350%;
+		float: left;
+		width: 40%;
+		height: 300px;
+	}
+	.weather2{
+		float: left;
+		width: 15%;
+		height: 130px;
+	}
+	.weather3{
+		text-align: left;
+		float: left;
+		width: 35%;
+		height: 120px;
+		font-size: 18px;
+		margin-top: 0;
+	}
+	.weather4{
+		float: left;
+		width: 15%;
+		height: 130px;
+	}
+	
+	.forcast{
+		margin-left: 25%;
+		float:  center;
+	}
+}
+
+@media only screen and (min-width:1272px) and (max-width:1786px)
+{
+	.button1{
+		width: 20%;
+		margin:2%;
+		margin-bottom: 0;
+		margin-left: 2.5%
+	}
+	.title{
+		margin: 0;
+		margin-bottom: 0;
+	}
+
+	.button2{
+		width: 20%;
+		margin-bottom: 0;
+		position: relative;
+		left: 30%;
+		margin-top: 0;
+	}
+
+	input{
+		width: 20%;
+		margin-bottom: 0;
+		margin: 1.5%;
+		position: relative;
+		left: 30%;
+		margin-top: 0;
+	}
+	.weather1{
+		margin: 1.5%;
+		font-size: 300%;
+		float: left;
+		width: 30%;
+		/*height: 250px;*/
+		margin-top: 0;
+		margin-right: 10px;
+		/*margin-left: 8%*/
+	}
+	.weather2{
+		float: left;
+		width: 15%;
+		/*height: 200px;*/
+		margin: 0;
+		margin-top: 20px;
+	}
+	
+	.weather3{
+		text-align: left;
+		float: left;
+		width: 35%;
+		/*height: 130px;*/
+		font-size: 18px;
+		margin-top: 7%;
+		margin-left: 5%
+	}
+	
+	.forcast{
+		margin-left: 30%;
+		margin-top: 10px;
+		margin-bottom: 10px%;
+		float:  center;
+	}
+	.forcast1{
+		margin-left: 5%;
+		float:  center;
+		opacity: 0.9;
+	}
+
